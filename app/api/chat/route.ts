@@ -9,7 +9,7 @@ const nexorian = createOpenAI({
 });
 const RequestSchema = z.object({
   messages: z.array(z.object({
-    role: z.enum(["system", "user", "assistant"]),
+    role: z.enum(["user", "assistant"]),
     content: z.string().max(12000),
   })).min(1).max(40),
 });

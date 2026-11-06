@@ -11,7 +11,7 @@ export default function Home() {
 
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     api: "/api/chat",
-    body: { system },
+    body: { context: system },
   });
 
   return (
